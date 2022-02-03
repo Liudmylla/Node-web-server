@@ -13,12 +13,8 @@ document.addEventListener("click", (event) => {
         title: title,
       };
       update(id, data).then(() => {
-        event.target.closest("li").remove();
-        let newLi = document.createElement("li");
-        let newTitle = document.createTextNode(data.title);
-        newLi.appendChild(newTitle);
-        let currentDiv = document.getElementsByTagName("ul");
-        document.body.insertBefore(newLi, currentDiv);
+        event.target.closest("li").querySelector(".flex-grow-1").innerText =
+          title;
       });
     }
   }

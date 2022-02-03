@@ -20,7 +20,7 @@ app.use(express.static(path.resolve(__dirname, "public")));
 
 app.use(
   express.urlencoded({
-    extenden: true,
+    extended: true,
   })
 );
 app.use(express.json());
