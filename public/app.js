@@ -14,9 +14,11 @@ document.addEventListener("click", (event) => {
       };
       update(id, data).then(() => {
         event.target.closest("li").remove();
-        let updatedItem = document.createElement("li");
-        updatedItem.innerText = title;
-        event.target.closets("li").appendChild(updatedItem);
+        let newLi = document.createElement("li");
+        let newTitle = document.createTextNode(data.title);
+        newLi.appendChild(newTitle);
+        let currentDiv = document.getElementsByTagName("ul");
+        document.body.insertBefore(newLi, currentDiv);
       });
     }
   }
