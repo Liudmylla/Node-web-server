@@ -36,18 +36,23 @@
            <div class="flex-grow-1">
             <%= notes[i].title %>
           </div>
-            <div class="button btn btn-primary" data-type="update" data-id ="<%= notes[i].id %>">
-              Редактировать
+            <div id="primary" class="button btn btn-primary" data-type="removeHidden" data-id ="<%= notes[i].id %>">
+              Обновить
             </div>
+          <div class="buttons"  hidden>
+            <div class="button btn btn-success"  data-type="update" data-id ="<%= notes[i].id %>">
+              Сохранить
+            </div>
+            <div class="button btn btn-danger"  data-type="addHidden" data-id ="<%= notes[i].id %>">
+              Отменить
+            </div>
+          </div>
             <div class="button btn btn-danger" data-type="remove" data-id ="<%= notes[i].id %>">
               x
             </div>
           </li>
           <% } %>
         </ul>
-     
-     
-     
       </div>
       <% } else {%>
         No notes!

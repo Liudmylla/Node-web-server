@@ -17,6 +17,18 @@ document.addEventListener("click", (event) => {
           title;
       });
     }
+  } else if (event.target.dataset.type === "removeHidden") {
+    const buttons = document.querySelector(".buttons");
+    buttons.removeAttribute("hidden");
+    const primary = document
+      .querySelector("#primary")
+      .setAttribute("hidden", true);
+    const select = document.createElement("select");
+  } else if (event.target.dataset.type === "addHidden") {
+    const buttons = document.querySelector(".buttons");
+    buttons.setAttribute("hidden", true);
+    const primary = document.querySelector("#primary");
+    primary.removeAttribute("hidden");
   }
 });
 
