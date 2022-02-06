@@ -34,19 +34,11 @@
         <% for (let i=0;i<notes.length;i++) { %>
           <li class="list-group-item d-flex justify-content-between align-items-center ">
            <div class="flex-grow-1">
-            <%= notes[i].title %>
+           <span> <%= notes[i].title %></span>
           </div>
-            <div id="primary" class="button btn btn-primary" data-type="removeHidden" data-id ="<%= notes[i].id %>">
+            <div id="primary" class="button btn btn-primary" data-type="edit" data-id ="<%= notes[i].id %>">
               Обновить
             </div>
-          <div class="buttons"  hidden>
-            <div class="button btn btn-success"  data-type="update" data-id ="<%= notes[i].id %>">
-              Сохранить
-            </div>
-            <div class="button btn btn-danger"  data-type="addHidden" data-id ="<%= notes[i].id %>">
-              Отменить
-            </div>
-          </div>
             <div class="button btn btn-danger" data-type="remove" data-id ="<%= notes[i].id %>">
               x
             </div>
